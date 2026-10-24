@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>背单词</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <div class="brand"><span>📖</span><span>背单词</span></div>
+    <nav id="sideNav"></nav>
+    <div class="sidebar-foot" id="sideFoot">本地数据 · 无云端</div>
+  </aside>
+  <div id="main">
+    <header id="topbar">
+      <button id="menuBtn" class="icon-btn only-mobile" aria-label="菜单">☰</button>
+      <h1 id="pageTitle">首页</h1>
+      <div id="topActions"></div>
+    </header>
+    <main id="content"></main>
+  </div>
+  <nav id="bottombar" class="only-mobile"></nav>
+</div>
+<div id="modalRoot"></div>
+<div id="toastRoot"></div>
+
+<script src="js/core/util.js"></script>
+<script src="js/core/db.js"></script>
+<script src="js/core/store.js"></script>
+<script src="js/core/settings.js"></script>
+<script src="js/core/migrate.js"></script>
+<script src="js/logic/scheduler.js"></script>
+<script src="js/logic/queue.js"></script>
+<script src="js/logic/quiz.js"></script>
+<script src="js/logic/import.js"></script>
+<script src="js/logic/stats.js"></script>
+<script src="js/logic/points.js"></script>
+<script src="js/logic/backup.js"></script>
+<script src="js/export.js"></script>
+<script src="js/seed-cet4.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/ui/components.js"></script>
+<script src="js/ui/chart.js"></script>
+<script src="js/ui/pages/home.js"></script>
+<script src="js/ui/pages/study.js"></script>
+<script src="js/ui/pages/books.js"></script>
+<script src="js/ui/pages/wrong.js"></script>
+<script src="js/ui/pages/test.js"></script>
+<script src="js/ui/pages/stats.js"></script>
+<script src="js/ui/pages/dict.js"></script>
+<script src="js/ui/pages/settings.js"></script>
+<script src="js/ui/router.js"></script>
+<script src="../test/memory.js"></script>
+<script src="../test/tests.js"></script>
+<script src="js/selftest.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+'use strict';
+const fs = require('fs');
+const raw1 = fs.readFileSync(require('path').join(__dirname, '..', 'convert', 'cet4-1500.txt'), 'utf8');
+const lines = raw1.split(/\r?\n/).map(function (l) { return l.trim(); }).filter(Boolean);
+const m = /^(\d+)[.．]\s*([A-Za-z][A-Za-z\-'']*)\s*(?:（([^）]*)）\s*)?(?:\[([^\]]*)\])?\s*(.*)$/;
+let matched = 0;
+const nums = new Map();
+const odd = [];
+lines.forEach(function (l) {
+  const mm = l.match(m);
+  if (!mm) return;
+  matched++;
+  const n = parseInt(mm[1], 10);
+  nums.set(n, (nums.get(n) || 0) + 1);
+  if (n > 1500) odd.push(l.slice(0, 90));
+});
+const maxN = Math.max.apply(null, Array.from(nums.keys()));
+const repeats = Array.from(nums.entries()).filter(function (x) { return x[1] > 1; });
+console.log('total lines:', lines.length, 'matched:', matched, 'max number:', maxN);
+console.log('numbers 1..1500 missing count:', (function () { let c = 0; for (let i = 1; i <= 1500; i++) if (!nums.has(i)) c++; return c; })());
+console.log('repeated numbers:', repeats.length, repeats.slice(0, 20).map(function (x) { return x[0] + '×' + x[1]; }).join(', '));
+console.log('odd lines (n>1500):', odd.length);
+odd.slice(0, 10).forEach(function (l) { console.log('  ', l); });
