@@ -6,8 +6,7 @@
 包含c语言的题库和考试系统<br>
 包含近代史和习概的离线刷题网页（可自行打包apk）<br>
 (https://github.com/zyt21/Qqhru-test-paper/tree/main/%E8%BF%91%E4%BB%A3%E5%8F%B2-%E4%B9%A0%E6%A6%82%E5%88%B7%E9%A2%98%E8%BD%AF%E4%BB%B6)<br>
-包含英语四级的背单词离线网页（可自行打包apk）<br>
-(https://github.com/zyt21/Qqhru-test-paper/tree/main/%E8%83%8C%E5%8D%95%E8%AF%8Dapp/release)<br>
+
 
 ## 免责声明
 
